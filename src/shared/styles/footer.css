@@ -1,0 +1,19 @@
+.footer-container{
+    display: flex !important;
+    justify-content: space-between;
+    align-items: center;
+}
+.social-links{
+    display: block;
+}
+.links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.links>*{
+    padding:3px
+}
+.links>*:hover{
+    color: red;
+}

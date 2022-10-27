@@ -190,9 +190,9 @@ export default function PrimarySearchAppBar() {
 
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static" open={open}>
-                <Toolbar>
-                    <IconButton
+            <AppBar style={{marginLeft:open?`${drawerWidth}px`:'0px'}} position="static" open={open}>
+                <Toolbar >
+                   {!open&& <IconButton
                         size="large"
                         edge="start"
                         color="inherit"
@@ -201,7 +201,7 @@ export default function PrimarySearchAppBar() {
                         sx={{ mr: 2 }}
                     >
                         <MenuIcon />
-                    </IconButton>
+                    </IconButton>}
                     <Typography
                         variant="h6"
                         noWrap
@@ -210,7 +210,7 @@ export default function PrimarySearchAppBar() {
                     >
                         MUI
                     </Typography>
-                   {!open&&<Search>
+                   <Search>
                         <SearchIconWrapper>
                             <SearchIcon />
                         </SearchIconWrapper>
@@ -218,7 +218,7 @@ export default function PrimarySearchAppBar() {
                             placeholder="Search…"
                             inputProps={{ 'aria-label': 'search' }}
                         />
-                    </Search>}
+                    </Search>
                     <Box sx={{ flexGrow: 1 }} />
                     <Box sx={{ display: { xs: 'none', md: 'flex' } }}>
                         <IconButton size="large" aria-label="show 4 new mails" color="inherit">

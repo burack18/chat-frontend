@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import Home from './home/components/Home';
 import Login from './auth/components/Login';
 import Layout from './shared/layout/components/Layout';
+import ChatRoomList from './chat-room/components/ChatRoomList';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 
@@ -14,7 +15,8 @@ root.render(
       <Routes>
         <Route path='login' element={<Login />} />
         <Route path="/" element={<Layout />} >
-          <Route index path='home' element={<Home />} />
+          <Route index element={<Home />} />
+          <Route path='/rooms' element={<ChatRoomList/>}/>
         </Route>
       </Routes>
     </BrowserRouter>
